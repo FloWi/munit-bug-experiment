@@ -5,6 +5,7 @@ import cats.implicits._
 class HelloSpec extends munit.FunSuite {
 
   test("first test") {
+    println("before assertion in first test")
     assertEquals(1, 1)
   }
 
@@ -15,6 +16,7 @@ class HelloSpec extends munit.FunSuite {
   }
 
   test("last test") {
+    println("before assertion in last test")
     assertEquals(1, 1)
   }
 }
