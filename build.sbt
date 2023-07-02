@@ -8,8 +8,6 @@ lazy val root = (project in file("."))
     name := "munit bug",
     libraryDependencies ++= Seq(
       "org.typelevel" %% "munit-cats-effect" % "2.0.0-M3" % Test,
-      "io.circe" %% "circe-generic" % "0.14.5",
-      "io.circe" %% "circe-parser" % "0.14.5"
     )
   )
 
