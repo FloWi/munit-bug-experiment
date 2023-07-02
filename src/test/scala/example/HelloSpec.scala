@@ -25,6 +25,8 @@ class HelloSpec extends munit.FunSuite {
 
   test("test with broken mock data") {
     println("Hello from inside 'test with broken mock data'")
+
+
     val coords =
       io.circe.parser
         .decode[List[Coord]](unexpectedJsonString)
@@ -36,6 +38,10 @@ class HelloSpec extends munit.FunSuite {
     println("Goodbye from inside 'test with broken mock data'")
 
     assertEquals(coords.toList, List(Coord(1, 2)))
+  }
+
+  test("throwing IllegalAccessError") {
+    throw new IllegalAccessError("asdf")
   }
 }
 
